@@ -13,9 +13,10 @@ namespace pryEstructuraDatos
         private Int32 cod;
         private String nom;
         private String tra;
-        private String sig;
+        private clsNodo sig;
 
         //Propiedades del nodo
+        //Get busca la variable , Set establece la variable
         public Int32 Codigo
         {
             get { return cod; }
@@ -31,7 +32,7 @@ namespace pryEstructuraDatos
             get { return tra; }
             set { tra = value; }
         }
-        public String Siguiente
+        public clsNodo Siguiente
         {
             get { return sig; }
             set { sig = value; }
