@@ -17,9 +17,51 @@ namespace pryEstructuraDatos
             InitializeComponent();
         }
 
+        clsPila FilaDePersonas = new clsPila();
+
         private void frmPila_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvPila_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            clsNodo ObjNodo = new clsNodo();
+            ObjNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
+            ObjNodo.Nombre = txtNombre.Text;
+            ObjNodo.Tramite = txtTramite.Text;
+            FilaDePersonas.Agregar(ObjNodo);
+            FilaDePersonas.Recorrer();
+            FilaDePersonas.Recorrer(dgvPila);
+            FilaDePersonas.Recorrer(lstPila);
+            txtCodigo.Text = "";
+            txtNombre.Text = "";
+            txtTramite.Text = "";
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (FilaDePersonas.Primero != null)
+            {
+                lblCodigo.Text = FilaDePersonas.Primero.Codigo.ToString();
+                lblNombre.Text = FilaDePersonas.Primero.Nombre;
+                lblTramite.Text = FilaDePersonas.Primero.Tramite;
+                FilaDePersonas.Eliminar();
+                FilaDePersonas.Recorrer(dgvPila);
+                FilaDePersonas.Recorrer(lstPila);
+                FilaDePersonas.Recorrer();
+            }
+            else
+            {
+                lblCodigo.Text = "";
+                lblNombre.Text = "";
+                lblTramite.Text = "";
+            }
         }
     }
 }
