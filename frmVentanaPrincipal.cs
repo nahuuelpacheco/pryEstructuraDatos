@@ -36,5 +36,19 @@ namespace pryEstructuraDatos
             frmCola.Show();
             this.Hide();
         }
+
+        private void pilaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPila frmPila = new frmPila();
+            frmPila.Show();
+            this.Hide();
+        }
+
+        private void listaSimpleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListaSimple frmListaSimple = new frmListaSimple();
+            frmListaSimple.Show();
+            this.Hide();
+        }
     }
 }
