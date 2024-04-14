@@ -61,6 +61,12 @@
     <Compile Include="frmDatosDesarollador.Designer.cs">
       <DependentUpon>frmDatosDesarollador.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmListaDoble.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaDoble.Designer.cs">
+      <DependentUpon>frmListaDoble.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmListaSimple.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDatosDesarollador.resx">
       <DependentUpon>frmDatosDesarollador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaDoble.resx">
+      <DependentUpon>frmListaDoble.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListaSimple.resx">
       <DependentUpon>frmListaSimple.cs</DependentUpon>
@@ -121,6 +130,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cola.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1200px-Pila.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lista simple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lista doblemente enlazada.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

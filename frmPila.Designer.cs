@@ -61,6 +61,7 @@ namespace pryEstructuraDatos
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::pryEstructuraDatos.Properties.Resources._1200px_Pila_svg;
             this.pictureBox1.Location = new System.Drawing.Point(2, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(205, 204);
