@@ -31,6 +31,12 @@ namespace pryEstructuraDatos
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dgvCola = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lstListaSimple = new System.Windows.Forms.ListBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.txtTramite = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -38,12 +44,6 @@ namespace pryEstructuraDatos
             this.lblTramite = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dgvCola = new System.Windows.Forms.DataGridView();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lstListaSimple = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,10 +51,12 @@ namespace pryEstructuraDatos
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -62,6 +64,7 @@ namespace pryEstructuraDatos
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -90,6 +93,52 @@ namespace pryEstructuraDatos
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nuevo Elemento";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.dgvCola);
+            this.groupBox3.Controls.Add(this.lstListaSimple);
+            this.groupBox3.Location = new System.Drawing.Point(-231, 199);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(726, 226);
+            this.groupBox3.TabIndex = 9;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Listado en una Lista y una Grilla";
+            // 
+            // dgvCola
+            // 
+            this.dgvCola.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCola.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Codigo,
+            this.Column1,
+            this.Column2});
+            this.dgvCola.Location = new System.Drawing.Point(240, 19);
+            this.dgvCola.Name = "dgvCola";
+            this.dgvCola.Size = new System.Drawing.Size(486, 186);
+            this.dgvCola.TabIndex = 1;
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Nombre";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Tramite";
+            this.Column2.Name = "Column2";
+            // 
+            // lstListaSimple
+            // 
+            this.lstListaSimple.FormattingEnabled = true;
+            this.lstListaSimple.Location = new System.Drawing.Point(6, 19);
+            this.lstListaSimple.Name = "lstListaSimple";
+            this.lstListaSimple.Size = new System.Drawing.Size(199, 186);
+            this.lstListaSimple.TabIndex = 0;
             // 
             // btnAgregar
             // 
@@ -147,52 +196,6 @@ namespace pryEstructuraDatos
             this.lblCodigo.Size = new System.Drawing.Size(43, 13);
             this.lblCodigo.TabIndex = 0;
             this.lblCodigo.Text = "Codigo:";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.dgvCola);
-            this.groupBox3.Controls.Add(this.lstListaSimple);
-            this.groupBox3.Location = new System.Drawing.Point(-231, 199);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(726, 226);
-            this.groupBox3.TabIndex = 9;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Listado en una Lista y una Grilla";
-            // 
-            // dgvCola
-            // 
-            this.dgvCola.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCola.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Codigo,
-            this.Column1,
-            this.Column2});
-            this.dgvCola.Location = new System.Drawing.Point(240, 19);
-            this.dgvCola.Name = "dgvCola";
-            this.dgvCola.Size = new System.Drawing.Size(486, 186);
-            this.dgvCola.TabIndex = 1;
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Nombre";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Tramite";
-            this.Column2.Name = "Column2";
-            // 
-            // lstListaSimple
-            // 
-            this.lstListaSimple.FormattingEnabled = true;
-            this.lstListaSimple.Location = new System.Drawing.Point(6, 19);
-            this.lstListaSimple.Name = "lstListaSimple";
-            this.lstListaSimple.Size = new System.Drawing.Size(199, 186);
-            this.lstListaSimple.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -252,6 +255,14 @@ namespace pryEstructuraDatos
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Elemento a eliminar";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(72, 31);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(100, 21);
+            this.comboBox1.TabIndex = 11;
+            // 
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(45, 67);
@@ -270,22 +281,38 @@ namespace pryEstructuraDatos
             this.label1.TabIndex = 1;
             this.label1.Text = "Codigo:";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(72, 31);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 21);
-            this.comboBox1.TabIndex = 11;
-            // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.radioButton2);
+            this.groupBox5.Controls.Add(this.radioButton1);
             this.groupBox5.Location = new System.Drawing.Point(477, 143);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(200, 100);
             this.groupBox5.TabIndex = 11;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Listar Datos:";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(14, 28);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(82, 17);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Ascendente";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(14, 64);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(89, 17);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Descendente";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // frmListaDoble
             // 
@@ -308,6 +335,8 @@ namespace pryEstructuraDatos
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -340,5 +369,7 @@ namespace pryEstructuraDatos
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }

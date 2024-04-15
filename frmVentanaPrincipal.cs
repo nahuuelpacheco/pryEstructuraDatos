@@ -50,5 +50,12 @@ namespace pryEstructuraDatos
             frmListaSimple.Show();
             this.Hide();
         }
+
+        private void listaDobleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListaDoble frmListaDoble = new frmListaDoble();
+            frmListaDoble.Show();
+            this.Hide();
+        }
     }
 }

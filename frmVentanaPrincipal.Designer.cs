@@ -134,6 +134,7 @@ namespace pryEstructuraDatos
             this.listaDobleToolStripMenuItem.Name = "listaDobleToolStripMenuItem";
             this.listaDobleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listaDobleToolStripMenuItem.Text = "Lista Doble...";
+            this.listaDobleToolStripMenuItem.Click += new System.EventHandler(this.listaDobleToolStripMenuItem_Click);
             // 
             // estructurasNoLinealesToolStripMenuItem
             // 
@@ -146,7 +147,7 @@ namespace pryEstructuraDatos
             // arbolBinarioToolStripMenuItem
             // 
             this.arbolBinarioToolStripMenuItem.Name = "arbolBinarioToolStripMenuItem";
-            this.arbolBinarioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.arbolBinarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.arbolBinarioToolStripMenuItem.Text = "Arbol Binario...";
             // 
             // baseDeDatosToolStripMenuItem

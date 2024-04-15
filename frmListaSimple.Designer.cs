@@ -39,20 +39,20 @@ namespace pryEstructuraDatos
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dgvCola = new System.Windows.Forms.DataGridView();
+            this.dgvListaS = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lstListaSimple = new System.Windows.Forms.ListBox();
+            this.cmbLista = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCola)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaS)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -89,6 +89,7 @@ namespace pryEstructuraDatos
             this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "Agregar ";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtTramite
             // 
@@ -140,7 +141,7 @@ namespace pryEstructuraDatos
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.cmbLista);
             this.groupBox2.Controls.Add(this.btnEliminar);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(500, 12);
@@ -150,14 +151,6 @@ namespace pryEstructuraDatos
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Elemento a eliminar";
             // 
-            // label4
-            // 
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.Location = new System.Drawing.Point(96, 103);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 20);
-            this.label4.TabIndex = 11;
-            // 
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(73, 149);
@@ -166,6 +159,7 @@ namespace pryEstructuraDatos
             this.btnEliminar.TabIndex = 6;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // label1
             // 
@@ -178,7 +172,7 @@ namespace pryEstructuraDatos
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.dgvCola);
+            this.groupBox3.Controls.Add(this.dgvListaS);
             this.groupBox3.Controls.Add(this.lstListaSimple);
             this.groupBox3.Location = new System.Drawing.Point(7, 229);
             this.groupBox3.Name = "groupBox3";
@@ -187,17 +181,17 @@ namespace pryEstructuraDatos
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Listado en una Lista y una Grilla";
             // 
-            // dgvCola
+            // dgvListaS
             // 
-            this.dgvCola.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCola.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvListaS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaS.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
             this.Column1,
             this.Column2});
-            this.dgvCola.Location = new System.Drawing.Point(240, 19);
-            this.dgvCola.Name = "dgvCola";
-            this.dgvCola.Size = new System.Drawing.Size(486, 186);
-            this.dgvCola.TabIndex = 1;
+            this.dgvListaS.Location = new System.Drawing.Point(240, 19);
+            this.dgvListaS.Name = "dgvListaS";
+            this.dgvListaS.Size = new System.Drawing.Size(486, 186);
+            this.dgvListaS.TabIndex = 1;
             // 
             // Codigo
             // 
@@ -222,6 +216,14 @@ namespace pryEstructuraDatos
             this.lstListaSimple.Size = new System.Drawing.Size(199, 186);
             this.lstListaSimple.TabIndex = 0;
             // 
+            // cmbLista
+            // 
+            this.cmbLista.FormattingEnabled = true;
+            this.cmbLista.Location = new System.Drawing.Point(73, 100);
+            this.cmbLista.Name = "cmbLista";
+            this.cmbLista.Size = new System.Drawing.Size(121, 21);
+            this.cmbLista.TabIndex = 7;
+            // 
             // frmListaSimple
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -233,13 +235,14 @@ namespace pryEstructuraDatos
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmListaSimple";
             this.Text = "Estructura de datos lineal: Lista Simple";
+            this.Load += new System.EventHandler(this.frmListaSimple_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCola)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaS)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -256,14 +259,14 @@ namespace pryEstructuraDatos
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DataGridView dgvCola;
+        private System.Windows.Forms.DataGridView dgvListaS;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.ListBox lstListaSimple;
+        private System.Windows.Forms.ComboBox cmbLista;
     }
 }
