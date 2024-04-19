@@ -15,6 +15,7 @@ namespace pryEstructuraDatos
         private String nom;
         private String tra;
         private clsNodo sig;
+        private clsNodo ant;
 
         //Propiedades del nodo
         //Get busca la variable , Set establece la variable
@@ -37,6 +38,11 @@ namespace pryEstructuraDatos
         {
             get { return sig; }
             set { sig = value; }
+        }
+        public clsNodo Anterior
+        {
+            get { return ant; }
+            set { ant = value; }
         }
     }
 }
