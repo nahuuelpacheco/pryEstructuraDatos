@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace pryEstructuraDatos
 {
-    public partial class frmListaDoble : Form
+    public partial class frmArbolBinario : Form
     {
-        public frmListaDoble()
+        public frmArbolBinario()
         {
             InitializeComponent();
-        }
-
-        private void frmListaDoble_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
