@@ -35,10 +35,11 @@ namespace pryEstructuraDatos
             this.txtTramite = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.lblTramite = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblCodigo = new System.Windows.Forms.Label();
+            this.lblTram = new System.Windows.Forms.Label();
+            this.lblNom = new System.Windows.Forms.Label();
+            this.lblCod = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cmbLista = new System.Windows.Forms.ComboBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -47,7 +48,7 @@ namespace pryEstructuraDatos
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lstListaSimple = new System.Windows.Forms.ListBox();
-            this.cmbLista = new System.Windows.Forms.ComboBox();
+            this.btnVolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -71,9 +72,9 @@ namespace pryEstructuraDatos
             this.groupBox1.Controls.Add(this.txtTramite);
             this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Controls.Add(this.txtCodigo);
-            this.groupBox1.Controls.Add(this.lblTramite);
-            this.groupBox1.Controls.Add(this.lblNombre);
-            this.groupBox1.Controls.Add(this.lblCodigo);
+            this.groupBox1.Controls.Add(this.lblTram);
+            this.groupBox1.Controls.Add(this.lblNom);
+            this.groupBox1.Controls.Add(this.lblCod);
             this.groupBox1.Location = new System.Drawing.Point(238, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(232, 204);
@@ -112,32 +113,32 @@ namespace pryEstructuraDatos
             this.txtCodigo.Size = new System.Drawing.Size(100, 20);
             this.txtCodigo.TabIndex = 3;
             // 
-            // lblTramite
+            // lblTram
             // 
-            this.lblTramite.AutoSize = true;
-            this.lblTramite.Location = new System.Drawing.Point(15, 117);
-            this.lblTramite.Name = "lblTramite";
-            this.lblTramite.Size = new System.Drawing.Size(45, 13);
-            this.lblTramite.TabIndex = 2;
-            this.lblTramite.Text = "Tramite:";
+            this.lblTram.AutoSize = true;
+            this.lblTram.Location = new System.Drawing.Point(15, 117);
+            this.lblTram.Name = "lblTram";
+            this.lblTram.Size = new System.Drawing.Size(45, 13);
+            this.lblTram.TabIndex = 2;
+            this.lblTram.Text = "Tramite:";
             // 
-            // lblNombre
+            // lblNom
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(15, 75);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(47, 13);
-            this.lblNombre.TabIndex = 1;
-            this.lblNombre.Text = "Nombre:";
+            this.lblNom.AutoSize = true;
+            this.lblNom.Location = new System.Drawing.Point(15, 75);
+            this.lblNom.Name = "lblNom";
+            this.lblNom.Size = new System.Drawing.Size(47, 13);
+            this.lblNom.TabIndex = 1;
+            this.lblNom.Text = "Nombre:";
             // 
-            // lblCodigo
+            // lblCod
             // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(15, 39);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(43, 13);
-            this.lblCodigo.TabIndex = 0;
-            this.lblCodigo.Text = "Codigo:";
+            this.lblCod.AutoSize = true;
+            this.lblCod.Location = new System.Drawing.Point(15, 39);
+            this.lblCod.Name = "lblCod";
+            this.lblCod.Size = new System.Drawing.Size(43, 13);
+            this.lblCod.TabIndex = 0;
+            this.lblCod.Text = "Codigo:";
             // 
             // groupBox2
             // 
@@ -150,6 +151,14 @@ namespace pryEstructuraDatos
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Elemento a eliminar";
+            // 
+            // cmbLista
+            // 
+            this.cmbLista.FormattingEnabled = true;
+            this.cmbLista.Location = new System.Drawing.Point(73, 100);
+            this.cmbLista.Name = "cmbLista";
+            this.cmbLista.Size = new System.Drawing.Size(121, 21);
+            this.cmbLista.TabIndex = 7;
             // 
             // btnEliminar
             // 
@@ -216,24 +225,28 @@ namespace pryEstructuraDatos
             this.lstListaSimple.Size = new System.Drawing.Size(199, 186);
             this.lstListaSimple.TabIndex = 0;
             // 
-            // cmbLista
+            // btnVolver
             // 
-            this.cmbLista.FormattingEnabled = true;
-            this.cmbLista.Location = new System.Drawing.Point(73, 100);
-            this.cmbLista.Name = "cmbLista";
-            this.cmbLista.Size = new System.Drawing.Size(121, 21);
-            this.cmbLista.TabIndex = 7;
+            this.btnVolver.Location = new System.Drawing.Point(13, 457);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(75, 23);
+            this.btnVolver.TabIndex = 9;
+            this.btnVolver.Text = "VOLVER";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // frmListaSimple
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 492);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmListaSimple";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estructura de datos lineal: Lista Simple";
             this.Load += new System.EventHandler(this.frmListaSimple_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -255,9 +268,9 @@ namespace pryEstructuraDatos
         private System.Windows.Forms.TextBox txtTramite;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.Label lblTramite;
-        private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.Label lblTram;
+        private System.Windows.Forms.Label lblNom;
+        private System.Windows.Forms.Label lblCod;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label label1;
@@ -268,5 +281,6 @@ namespace pryEstructuraDatos
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.ListBox lstListaSimple;
         private System.Windows.Forms.ComboBox cmbLista;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

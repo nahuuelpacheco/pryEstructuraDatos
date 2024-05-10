@@ -16,5 +16,22 @@ namespace pryEstructuraDatos
         {
             InitializeComponent();
         }
+
+        private void frmDatosDesarollador_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            frmVentanaPrincipal frmDatosDesarollador = new frmVentanaPrincipal();
+            frmDatosDesarollador.Show();
+            this.Close();
+        }
     }
 }

@@ -47,8 +47,8 @@ namespace pryEstructuraDatos
             if (FilaDePersonas.Primero != null)
             {
                 lblCodigo.Text = FilaDePersonas.Primero.Codigo.ToString();
-                lblNombre.Text = FilaDePersonas.Primero.Nombre;
-                lblTramite.Text = FilaDePersonas.Primero.Tramite;
+                lblNombre.Text = FilaDePersonas.Primero.Codigo.ToString();
+                lblTramite.Text = FilaDePersonas.Primero.Codigo.ToString();
                 FilaDePersonas.Elminar();
                 FilaDePersonas.Recorrer(dgvCola);
                 FilaDePersonas.Recorrer(lstCola);
@@ -65,6 +65,13 @@ namespace pryEstructuraDatos
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            frmVentanaPrincipal frmCola = new frmVentanaPrincipal();
+            frmCola.Show();
+            this.Close();
         }
     }
 }

@@ -49,8 +49,8 @@ namespace pryEstructuraDatos
             if (FilaDePersonas.Primero != null)
             {
                 lblCodigo.Text = FilaDePersonas.Primero.Codigo.ToString();
-                lblNombre.Text = FilaDePersonas.Primero.Nombre;
-                lblTramite.Text = FilaDePersonas.Primero.Tramite;
+                lblNombre.Text = FilaDePersonas.Primero.Nombre.ToString();
+                lblTramite.Text = FilaDePersonas.Primero.Tramite.ToString();
                 FilaDePersonas.Eliminar();
                 FilaDePersonas.Recorrer(dgvPila);
                 FilaDePersonas.Recorrer(lstPila);
@@ -62,6 +62,13 @@ namespace pryEstructuraDatos
                 lblNombre.Text = "";
                 lblTramite.Text = "";
             }
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            frmVentanaPrincipal frmPila = new frmVentanaPrincipal();
+            frmPila.Show();
+            this.Close();
         }
     }
 }

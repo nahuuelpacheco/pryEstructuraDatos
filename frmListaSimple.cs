@@ -38,8 +38,9 @@ namespace pryEstructuraDatos
             else
             {
                 MessageBox.Show("La lista esta vacia");
+                cmbLista.Items.Clear();
             }
-            btnEliminar.Enabled = false;
+            
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -56,6 +57,13 @@ namespace pryEstructuraDatos
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtTramite.Text = "";
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            frmVentanaPrincipal frmListaSimple = new frmVentanaPrincipal();
+            frmListaSimple.Show();
+            this.Close();
         }
     }
 }

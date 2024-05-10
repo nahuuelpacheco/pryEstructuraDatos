@@ -41,28 +41,29 @@ namespace pryEstructuraDatos
             this.txtTramite = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.lblTramite = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblCodigo = new System.Windows.Forms.Label();
+            this.lblTram = new System.Windows.Forms.Label();
+            this.lblNom = new System.Windows.Forms.Label();
+            this.lblCod = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvListaD = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lstListaDoble = new System.Windows.Forms.ListBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbLista = new System.Windows.Forms.ComboBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rbDescendente = new System.Windows.Forms.RadioButton();
+            this.rbAscendente = new System.Windows.Forms.RadioButton();
+            this.btnVolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCola)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaD)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.SuspendLayout();
@@ -84,9 +85,9 @@ namespace pryEstructuraDatos
             this.groupBox1.Controls.Add(this.txtTramite);
             this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Controls.Add(this.txtCodigo);
-            this.groupBox1.Controls.Add(this.lblTramite);
-            this.groupBox1.Controls.Add(this.lblNombre);
-            this.groupBox1.Controls.Add(this.lblCodigo);
+            this.groupBox1.Controls.Add(this.lblTram);
+            this.groupBox1.Controls.Add(this.lblNom);
+            this.groupBox1.Controls.Add(this.lblCod);
             this.groupBox1.Location = new System.Drawing.Point(225, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(232, 204);
@@ -148,6 +149,7 @@ namespace pryEstructuraDatos
             this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "Agregar ";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click_1);
             // 
             // txtTramite
             // 
@@ -170,37 +172,37 @@ namespace pryEstructuraDatos
             this.txtCodigo.Size = new System.Drawing.Size(100, 20);
             this.txtCodigo.TabIndex = 3;
             // 
-            // lblTramite
+            // lblTram
             // 
-            this.lblTramite.AutoSize = true;
-            this.lblTramite.Location = new System.Drawing.Point(15, 117);
-            this.lblTramite.Name = "lblTramite";
-            this.lblTramite.Size = new System.Drawing.Size(45, 13);
-            this.lblTramite.TabIndex = 2;
-            this.lblTramite.Text = "Tramite:";
+            this.lblTram.AutoSize = true;
+            this.lblTram.Location = new System.Drawing.Point(15, 117);
+            this.lblTram.Name = "lblTram";
+            this.lblTram.Size = new System.Drawing.Size(45, 13);
+            this.lblTram.TabIndex = 2;
+            this.lblTram.Text = "Tramite:";
             // 
-            // lblNombre
+            // lblNom
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(15, 75);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(47, 13);
-            this.lblNombre.TabIndex = 1;
-            this.lblNombre.Text = "Nombre:";
+            this.lblNom.AutoSize = true;
+            this.lblNom.Location = new System.Drawing.Point(15, 75);
+            this.lblNom.Name = "lblNom";
+            this.lblNom.Size = new System.Drawing.Size(47, 13);
+            this.lblNom.TabIndex = 1;
+            this.lblNom.Text = "Nombre:";
             // 
-            // lblCodigo
+            // lblCod
             // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(15, 39);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(43, 13);
-            this.lblCodigo.TabIndex = 0;
-            this.lblCodigo.Text = "Codigo:";
+            this.lblCod.AutoSize = true;
+            this.lblCod.Location = new System.Drawing.Point(15, 39);
+            this.lblCod.Name = "lblCod";
+            this.lblCod.Size = new System.Drawing.Size(43, 13);
+            this.lblCod.TabIndex = 0;
+            this.lblCod.Text = "Codigo:";
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Controls.Add(this.listBox1);
+            this.groupBox2.Controls.Add(this.dgvListaD);
+            this.groupBox2.Controls.Add(this.lstListaDoble);
             this.groupBox2.Location = new System.Drawing.Point(4, 230);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(726, 226);
@@ -208,17 +210,17 @@ namespace pryEstructuraDatos
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Listado en una Lista y una Grilla";
             // 
-            // dataGridView1
+            // dgvListaD
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvListaD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
-            this.dataGridView1.Location = new System.Drawing.Point(240, 19);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(486, 186);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvListaD.Location = new System.Drawing.Point(240, 19);
+            this.dgvListaD.Name = "dgvListaD";
+            this.dgvListaD.Size = new System.Drawing.Size(486, 186);
+            this.dgvListaD.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -235,17 +237,17 @@ namespace pryEstructuraDatos
             this.dataGridViewTextBoxColumn3.HeaderText = "Tramite";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
-            // listBox1
+            // lstListaDoble
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(6, 19);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(199, 186);
-            this.listBox1.TabIndex = 0;
+            this.lstListaDoble.FormattingEnabled = true;
+            this.lstListaDoble.Location = new System.Drawing.Point(6, 19);
+            this.lstListaDoble.Name = "lstListaDoble";
+            this.lstListaDoble.Size = new System.Drawing.Size(199, 186);
+            this.lstListaDoble.TabIndex = 0;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.comboBox1);
+            this.groupBox4.Controls.Add(this.cmbLista);
             this.groupBox4.Controls.Add(this.btnEliminar);
             this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.Location = new System.Drawing.Point(468, 12);
@@ -255,13 +257,13 @@ namespace pryEstructuraDatos
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Elemento a eliminar";
             // 
-            // comboBox1
+            // cmbLista
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(72, 31);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 21);
-            this.comboBox1.TabIndex = 11;
+            this.cmbLista.FormattingEnabled = true;
+            this.cmbLista.Location = new System.Drawing.Point(72, 31);
+            this.cmbLista.Name = "cmbLista";
+            this.cmbLista.Size = new System.Drawing.Size(100, 21);
+            this.cmbLista.TabIndex = 11;
             // 
             // btnEliminar
             // 
@@ -271,6 +273,7 @@ namespace pryEstructuraDatos
             this.btnEliminar.TabIndex = 6;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
             // label1
             // 
@@ -283,8 +286,8 @@ namespace pryEstructuraDatos
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.radioButton2);
-            this.groupBox5.Controls.Add(this.radioButton1);
+            this.groupBox5.Controls.Add(this.rbDescendente);
+            this.groupBox5.Controls.Add(this.rbAscendente);
             this.groupBox5.Location = new System.Drawing.Point(477, 143);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(200, 100);
@@ -292,39 +295,53 @@ namespace pryEstructuraDatos
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Listar Datos:";
             // 
-            // radioButton2
+            // rbDescendente
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(14, 64);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(89, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Descendente";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbDescendente.AutoSize = true;
+            this.rbDescendente.Location = new System.Drawing.Point(14, 64);
+            this.rbDescendente.Name = "rbDescendente";
+            this.rbDescendente.Size = new System.Drawing.Size(89, 17);
+            this.rbDescendente.TabIndex = 1;
+            this.rbDescendente.TabStop = true;
+            this.rbDescendente.Text = "Descendente";
+            this.rbDescendente.UseVisualStyleBackColor = true;
+            this.rbDescendente.CheckedChanged += new System.EventHandler(this.rbDescendente_CheckedChanged_1);
             // 
-            // radioButton1
+            // rbAscendente
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(14, 28);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(82, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Ascendente";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbAscendente.AutoSize = true;
+            this.rbAscendente.Location = new System.Drawing.Point(14, 28);
+            this.rbAscendente.Name = "rbAscendente";
+            this.rbAscendente.Size = new System.Drawing.Size(82, 17);
+            this.rbAscendente.TabIndex = 0;
+            this.rbAscendente.TabStop = true;
+            this.rbAscendente.Text = "Ascendente";
+            this.rbAscendente.UseVisualStyleBackColor = true;
+            this.rbAscendente.CheckedChanged += new System.EventHandler(this.rbAscendente_CheckedChanged_1);
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.Location = new System.Drawing.Point(10, 458);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(75, 23);
+            this.btnVolver.TabIndex = 12;
+            this.btnVolver.Text = "VOLVER";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // frmListaDoble
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 493);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmListaDoble";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista Doblemente Enlazada";
             this.Load += new System.EventHandler(this.frmListaDoble_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -333,7 +350,7 @@ namespace pryEstructuraDatos
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCola)).EndInit();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaD)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -350,9 +367,9 @@ namespace pryEstructuraDatos
         private System.Windows.Forms.TextBox txtTramite;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.Label lblTramite;
-        private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.Label lblTram;
+        private System.Windows.Forms.Label lblNom;
+        private System.Windows.Forms.Label lblCod;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dgvCola;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
@@ -360,17 +377,18 @@ namespace pryEstructuraDatos
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.ListBox lstListaSimple;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvListaD;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lstListaDoble;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbLista;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbDescendente;
+        private System.Windows.Forms.RadioButton rbAscendente;
+        private System.Windows.Forms.Button btnVolver;
     }
 }
