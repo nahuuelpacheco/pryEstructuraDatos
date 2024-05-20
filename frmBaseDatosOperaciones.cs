@@ -16,5 +16,34 @@ namespace pryEstructuraDatos
         {
             InitializeComponent();
         }
+
+        clsBaseDatos objBaseDatos = new clsBaseDatos();
+        
+        private void btnProyeccionSimple_Click(object sender, EventArgs e)
+        {
+            String varSQL = "SELECT TITULO " +
+                "FROM LIBRO " +
+                "ORDER BY 1 DESC";
+
+            objBaseDatos.Listar(dgvDatosBaseDatos, varSQL);
+;        }
+
+        private void dgvDatosBaseDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnProyeccionMultiatributo_Click(object sender, EventArgs e)
+        {
+            String varSQL = "SELECT TITULO , AÑO " +
+                  "FROM LIBRO " + "ORDER BY 1 DESC";
+
+            objBaseDatos.Listar(dgvDatosBaseDatos, varSQL);
+        }
+
+        private void btnJuntar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
