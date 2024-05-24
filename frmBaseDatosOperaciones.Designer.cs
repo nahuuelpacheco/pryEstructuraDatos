@@ -119,6 +119,7 @@ namespace pryEstructuraDatos
             this.btnSeleccionConvolucion.TabIndex = 5;
             this.btnSeleccionConvolucion.Text = "Seleccion por convolucion";
             this.btnSeleccionConvolucion.UseVisualStyleBackColor = true;
+            this.btnSeleccionConvolucion.Click += new System.EventHandler(this.btnSeleccionConvolucion_Click);
             // 
             // btnSeleccionMultiatributo
             // 
@@ -128,6 +129,7 @@ namespace pryEstructuraDatos
             this.btnSeleccionMultiatributo.TabIndex = 4;
             this.btnSeleccionMultiatributo.Text = "Seleccion multiatributo";
             this.btnSeleccionMultiatributo.UseVisualStyleBackColor = true;
+            this.btnSeleccionMultiatributo.Click += new System.EventHandler(this.btnSeleccionMultiatributo_Click);
             // 
             // btnSeleccionSimple
             // 
@@ -137,6 +139,7 @@ namespace pryEstructuraDatos
             this.btnSeleccionSimple.TabIndex = 3;
             this.btnSeleccionSimple.Text = "Seleccion simple";
             this.btnSeleccionSimple.UseVisualStyleBackColor = true;
+            this.btnSeleccionSimple.Click += new System.EventHandler(this.btnSeleccionSimple_Click);
             // 
             // groupBox3
             // 
@@ -158,6 +161,7 @@ namespace pryEstructuraDatos
             this.btnDiferencia.TabIndex = 8;
             this.btnDiferencia.Text = "Diferencia";
             this.btnDiferencia.UseVisualStyleBackColor = true;
+            this.btnDiferencia.Click += new System.EventHandler(this.btnDiferencia_Click);
             // 
             // btnInterseccion
             // 
@@ -167,6 +171,7 @@ namespace pryEstructuraDatos
             this.btnInterseccion.TabIndex = 7;
             this.btnInterseccion.Text = "Interseccion";
             this.btnInterseccion.UseVisualStyleBackColor = true;
+            this.btnInterseccion.Click += new System.EventHandler(this.btnInterseccion_Click);
             // 
             // btnUnion
             // 
@@ -176,6 +181,7 @@ namespace pryEstructuraDatos
             this.btnUnion.TabIndex = 6;
             this.btnUnion.Text = "Union";
             this.btnUnion.UseVisualStyleBackColor = true;
+            this.btnUnion.Click += new System.EventHandler(this.btnUnion_Click);
             // 
             // frmBaseDatosOperaciones
             // 
