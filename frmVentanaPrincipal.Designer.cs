@@ -185,7 +185,8 @@ namespace pryEstructuraDatos
             // 
             this.repasoDeOpeacionesToolStripMenuItem.Name = "repasoDeOpeacionesToolStripMenuItem";
             this.repasoDeOpeacionesToolStripMenuItem.Size = new System.Drawing.Size(302, 22);
-            this.repasoDeOpeacionesToolStripMenuItem.Text = "Repaso de Opeaciones...";
+            this.repasoDeOpeacionesToolStripMenuItem.Text = "Repaso de Operaciones...";
+            this.repasoDeOpeacionesToolStripMenuItem.Click += new System.EventHandler(this.repasoDeOpeacionesToolStripMenuItem_Click_1);
             // 
             // frmVentanaPrincipal
             // 

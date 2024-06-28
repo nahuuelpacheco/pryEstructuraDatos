@@ -29,6 +29,7 @@ namespace pryEstructuraDatos
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDatosDesarollador));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,7 +40,6 @@ namespace pryEstructuraDatos
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -49,7 +49,7 @@ namespace pryEstructuraDatos
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(357, 77);
+            this.label1.Location = new System.Drawing.Point(314, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 24);
             this.label1.TabIndex = 1;
@@ -59,7 +59,7 @@ namespace pryEstructuraDatos
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(357, 135);
+            this.label2.Location = new System.Drawing.Point(314, 135);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 24);
             this.label2.TabIndex = 2;
@@ -69,7 +69,7 @@ namespace pryEstructuraDatos
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(357, 194);
+            this.label3.Location = new System.Drawing.Point(314, 194);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 24);
             this.label3.TabIndex = 3;
@@ -79,7 +79,7 @@ namespace pryEstructuraDatos
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(357, 243);
+            this.label4.Location = new System.Drawing.Point(314, 243);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(106, 24);
             this.label4.TabIndex = 4;
@@ -89,7 +89,7 @@ namespace pryEstructuraDatos
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(357, 292);
+            this.label5.Location = new System.Drawing.Point(314, 292);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 24);
             this.label5.TabIndex = 5;
@@ -99,7 +99,7 @@ namespace pryEstructuraDatos
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(490, 77);
+            this.label6.Location = new System.Drawing.Point(436, 77);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(90, 24);
             this.label6.TabIndex = 6;
@@ -109,7 +109,7 @@ namespace pryEstructuraDatos
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(490, 135);
+            this.label7.Location = new System.Drawing.Point(436, 135);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(151, 24);
             this.label7.TabIndex = 7;
@@ -119,7 +119,7 @@ namespace pryEstructuraDatos
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(490, 194);
+            this.label8.Location = new System.Drawing.Point(436, 194);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(171, 24);
             this.label8.TabIndex = 8;
@@ -129,7 +129,7 @@ namespace pryEstructuraDatos
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(490, 243);
+            this.label9.Location = new System.Drawing.Point(436, 243);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(182, 24);
             this.label9.TabIndex = 9;
@@ -139,22 +139,11 @@ namespace pryEstructuraDatos
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(490, 292);
+            this.label10.Location = new System.Drawing.Point(436, 292);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(100, 24);
             this.label10.TabIndex = 10;
             this.label10.Text = "08/05/2024";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(12, 378);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(784, 13);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "Disculpe profe, no se me deja mostrar mi foto, en mi pc me la mostraba. Creo que " +
-    "tuve un problema de copilacion con el github. Cuando vuelva a mi casa la actuali" +
-    "zo";
             // 
             // btnVolver
             // 
@@ -168,9 +157,11 @@ namespace pryEstructuraDatos
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(49, 59);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(31, 54);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(261, 273);
+            this.pictureBox1.Size = new System.Drawing.Size(219, 273);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -181,7 +172,6 @@ namespace pryEstructuraDatos
             this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(800, 446);
             this.Controls.Add(this.btnVolver);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -217,7 +207,6 @@ namespace pryEstructuraDatos
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnVolver;
     }
 }

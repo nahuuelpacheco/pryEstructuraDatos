@@ -80,12 +80,11 @@ namespace pryEstructuraDatos
             this.Hide();
         }
 
-        private void repasoDeOpeacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void repasoDeOpeacionesToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             frmBaseDatosRepasoOperaciones frmBaseDatosRepasoOperaciones = new frmBaseDatosRepasoOperaciones();
             frmBaseDatosRepasoOperaciones.Show();
             this.Hide();
-
         }
     }
 }

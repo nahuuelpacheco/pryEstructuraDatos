@@ -98,5 +98,10 @@ namespace pryEstructuraDatos
 
             objBaseDatos.Listar(dgvDatosBaseDatos, varSQL);
         }
+
+        private void frmBaseDatosOperaciones_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

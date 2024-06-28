@@ -195,6 +195,7 @@ namespace pryEstructuraDatos
             this.Name = "frmBaseDatosOperaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBaseDatosOperaciones";
+            this.Load += new System.EventHandler(this.frmBaseDatosOperaciones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatosBaseDatos)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
